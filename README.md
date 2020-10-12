@@ -1,9 +1,6 @@
-### Take home assignment - React.js @ Betsol
+### Assignment - React.js @ Betsol
 
-- Duration - 48 hours
-
-Hello there 👋 Thank you for taking this interview 🙏 and congratulations on making it this far 🎉.  
-Your mission should you choose to accept it, is to create a user interface for an instance management dashboard.
+To create a user interface for an instance management dashboard.
 
 ![Instances USD](/mockups/instances-usd.png)
 
