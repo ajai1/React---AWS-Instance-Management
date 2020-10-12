@@ -78,6 +78,7 @@ const Dashboard = () => {
         <Header />
       </div>
       <div className="view__container">
+        {/* Instance Info Container */}
         <div className="instance__container">
           <div className="typography__container">
             <div style={{ marginLeft: "20px" }}>
@@ -105,6 +106,7 @@ const Dashboard = () => {
             <Typography variant="body1">USD</Typography>
           </div>
         </div>
+        {/* Instance Table Container */}
         <TableComponent
           instances={instances}
           startInstance={startInstance}

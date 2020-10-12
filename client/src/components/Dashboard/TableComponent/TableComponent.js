@@ -1,4 +1,5 @@
 import React from "react";
+// Material-UI --------------------------------------------------------------------------------
 import {
   Paper,
   Table,
@@ -10,7 +11,7 @@ import {
   Typography,
 } from "@material-ui/core";
 import { withStyles } from "@material-ui/core/styles";
-
+// Customized Material-UI ---------------------------------------------------------------------
 const StyledTableCell = withStyles((theme) => ({
   head: {
     backgroundColor: "#B3D0CE",
@@ -32,6 +33,8 @@ const StyledTableRow = withStyles((theme) => ({
   },
 }))(TableRow);
 
+// Component starts -------------------------------------------------------------------
+
 const TableComponent = ({ instances, startInstance, stopInstance, isUSD }) => {
   const actionOnInstance = (status, id) => {
     if (status === "stopped") {
@@ -45,7 +48,7 @@ const TableComponent = ({ instances, startInstance, stopInstance, isUSD }) => {
       <div>
         <Typography variant="h6">Instances</Typography>
       </div>
-      <div style={{ width: "100%", marginTop: "10px" }}>
+      <div className="instance__table">
         <TableContainer component={Paper}>
           <Table aria-label="customized table">
             <TableHead>

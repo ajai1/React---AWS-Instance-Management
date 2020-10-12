@@ -1,5 +1,9 @@
 import React, { useState } from "react";
+// Dependent Component --------------------------------------------------------------
 import { Link } from "react-router-dom";
+import { useHistory } from "react-router-dom";
+import axios from "axios";
+// Material UI  ---------------------------------------------------------------------
 import {
   FormControl,
   FormHelperText,
@@ -8,11 +12,10 @@ import {
   Button,
   Typography,
 } from "@material-ui/core";
-import { useHistory } from "react-router-dom";
-import axios from "axios";
-
+// CSS ------------------------------------------------------------------------------
 import "./Login.css";
 
+// Styles ---------------------------------------------------------------------------
 const useStyles = makeStyles((theme) => ({
   helperText: {
     margin: "0",
@@ -22,7 +25,8 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Login = ({ header, submit, footerLink, link }) => {
+// Login Component ------------------------------------------------------------------
+const Login = ({ header, submit, footerLink, link, isLoggedIn }) => {
   const classes = useStyles();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -30,13 +34,12 @@ const Login = ({ header, submit, footerLink, link }) => {
 
   const onSubmit = async () => {
     let url = "/api/login";
-    if (submit !== "Login") {
-      url = "/api/register";
-    }
+    if (submit !== "Login") url = "/api/register";
     const res = await axios.post(url, { email, password });
     if (res.headers.authorization) {
       localStorage.setItem("authorization", res.headers.authorization);
     }
+    isLoggedIn();
     history.push({
       pathname: "/dashboard",
     });
@@ -68,6 +71,7 @@ const Login = ({ header, submit, footerLink, link }) => {
             id="outlined-multiline-flexible"
             rowsMax={4}
             variant="outlined"
+            type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
@@ -76,6 +80,7 @@ const Login = ({ header, submit, footerLink, link }) => {
             color="primary"
             style={{ marginBottom: "20px" }}
             onClick={onSubmit}
+            data-testid="submitBtn"
           >
             {submit}
           </Button>

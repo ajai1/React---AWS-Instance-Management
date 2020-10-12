@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
-import Login from "./LoginAndRegister/Login";
-import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
-
+//Dependent Router Dom --------------------------------------------------------
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+// Child Component ------------------------------------------------------------
+import Login from "./LoginAndRegister/Login";
 import Dashboard from "./Dashboard/Dashboard";
-
+// Material-UI Theme ----------------------------------------------------------
+import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
 const theme = createMuiTheme({
   palette: {
     primary: {
@@ -13,17 +14,22 @@ const theme = createMuiTheme({
   },
 });
 
+// App Component --------------------------------------------------------------
 function App() {
   const [isAuthorized, setIsAuthorized] = useState("false");
 
   useEffect(() => {
+    isLoggedIn();
+    console.log(isAuthorized);
+  }, [isAuthorized]);
+
+  const isLoggedIn = () => {
     if (localStorage.getItem("authorization")) {
       setIsAuthorized(localStorage.getItem("authorization"));
     } else {
       setIsAuthorized("false");
     }
-    console.log(isAuthorized);
-  }, [isAuthorized]);
+  };
 
   return (
     <div>
@@ -39,6 +45,7 @@ function App() {
                   submit="Login"
                   footerLink="Create an account"
                   link="/register"
+                  isLoggedIn={isLoggedIn}
                 />
               )}
             />
@@ -51,6 +58,7 @@ function App() {
                   submit="Create an account"
                   footerLink="Have an account already? Login here"
                   link="/login"
+                  isLoggedIn={isLoggedIn}
                 />
               )}
             />
@@ -65,6 +73,7 @@ function App() {
                     submit="Login"
                     footerLink="Create an account"
                     link="/register"
+                    isLoggedIn={isLoggedIn}
                   />
                 )}
               />
@@ -78,6 +87,7 @@ function App() {
                   submit="Login"
                   footerLink="Create an account"
                   link="/register"
+                  isLoggedIn={isLoggedIn}
                 />
               )}
             />

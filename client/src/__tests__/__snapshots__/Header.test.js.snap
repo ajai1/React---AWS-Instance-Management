@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders 1`] = `
+<DocumentFragment>
+  <div>
+    <header
+      class="MuiPaper-root MuiAppBar-root MuiAppBar-positionStatic MuiAppBar-colorPrimary MuiPaper-elevation4"
+    >
+      <div
+        class="MuiToolbar-root MuiToolbar-regular header__container MuiToolbar-gutters"
+      >
+        <div>
+          <h6
+            class="MuiTypography-root MuiTypography-h6"
+          >
+            Dashboard
+          </h6>
+        </div>
+        <div>
+          <p
+            class="MuiTypography-root MuiTypography-body1"
+            data-testid="logout"
+            style="cursor: pointer;"
+          >
+            Logout
+          </p>
+        </div>
+      </div>
+    </header>
+  </div>
+</DocumentFragment>
+`;

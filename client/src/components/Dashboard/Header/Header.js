@@ -37,6 +37,7 @@ const Header = () => {
               style={{ cursor: "pointer" }}
               variant="body1"
               onClick={logout}
+              data-testid="logout"
             >
               Logout
             </Typography>

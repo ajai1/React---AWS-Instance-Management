@@ -1,0 +1,185 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Match the Layout 1`] = `
+<DocumentFragment>
+  <div
+    class="dashboard__container"
+  >
+    <div>
+      <div>
+        <header
+          class="MuiPaper-root MuiAppBar-root MuiAppBar-positionStatic MuiAppBar-colorPrimary MuiPaper-elevation4"
+        >
+          <div
+            class="MuiToolbar-root MuiToolbar-regular header__container MuiToolbar-gutters"
+          >
+            <div>
+              <h6
+                class="MuiTypography-root MuiTypography-h6"
+              >
+                Dashboard
+              </h6>
+            </div>
+            <div>
+              <p
+                class="MuiTypography-root MuiTypography-body1"
+                data-testid="logout"
+                style="cursor: pointer;"
+              >
+                Logout
+              </p>
+            </div>
+          </div>
+        </header>
+      </div>
+    </div>
+    <div
+      class="view__container"
+    >
+      <div
+        class="instance__container"
+      >
+        <div
+          class="typography__container"
+        >
+          <div
+            style="margin-left: 20px;"
+          >
+            <h6
+              class="MuiTypography-root MuiTypography-h6"
+            >
+              $0.000/hr
+            </h6>
+            <p
+              class="MuiTypography-root MuiTypography-body1"
+            >
+              Running Instances
+            </p>
+          </div>
+          <div
+            style="margin-left: 20px;"
+          >
+            <h6
+              class="MuiTypography-root MuiTypography-h6"
+            >
+              $0.000/hr
+            </h6>
+            <p
+              class="MuiTypography-root MuiTypography-body1"
+            >
+              Stopped Instances
+            </p>
+          </div>
+        </div>
+        <div
+          class="switch__box"
+        >
+          <p
+            class="MuiTypography-root MuiTypography-body1"
+          >
+            INR
+          </p>
+          <span
+            class="MuiSwitch-root"
+          >
+            <span
+              aria-disabled="false"
+              class="MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-checked-2 Mui-checked"
+            >
+              <span
+                class="MuiIconButton-label"
+              >
+                <input
+                  checked=""
+                  class="PrivateSwitchBase-input-4 MuiSwitch-input"
+                  type="checkbox"
+                  value=""
+                />
+                <span
+                  class="MuiSwitch-thumb"
+                />
+              </span>
+              <span
+                class="MuiTouchRipple-root"
+              />
+            </span>
+            <span
+              class="MuiSwitch-track"
+            />
+          </span>
+          <p
+            class="MuiTypography-root MuiTypography-body1"
+          >
+            USD
+          </p>
+        </div>
+      </div>
+      <div
+        class="instance__detail__container"
+      >
+        <div>
+          <h6
+            class="MuiTypography-root MuiTypography-h6"
+          >
+            Instances
+          </h6>
+        </div>
+        <div
+          class="instance__table"
+        >
+          <div
+            class="MuiPaper-root MuiTableContainer-root MuiPaper-elevation1 MuiPaper-rounded"
+          >
+            <table
+              aria-label="customized table"
+              class="MuiTable-root"
+            >
+              <thead
+                class="MuiTableHead-root"
+              >
+                <tr
+                  class="MuiTableRow-root MuiTableRow-head"
+                >
+                  <th
+                    class="MuiTableCell-root MuiTableCell-head WithStyles(ForwardRef(TableCell))-head-5"
+                    scope="col"
+                  >
+                    ID
+                  </th>
+                  <th
+                    class="MuiTableCell-root MuiTableCell-head WithStyles(ForwardRef(TableCell))-head-5 MuiTableCell-alignLeft"
+                    scope="col"
+                  >
+                    Instance Name
+                  </th>
+                  <th
+                    class="MuiTableCell-root MuiTableCell-head WithStyles(ForwardRef(TableCell))-head-5 MuiTableCell-alignRight"
+                    scope="col"
+                  >
+                    Cost Per Hour
+                  </th>
+                  <th
+                    class="MuiTableCell-root MuiTableCell-head WithStyles(ForwardRef(TableCell))-head-5 MuiTableCell-alignLeft"
+                    scope="col"
+                  >
+                    Status
+                  </th>
+                  <th
+                    class="MuiTableCell-root MuiTableCell-head WithStyles(ForwardRef(TableCell))-head-5 MuiTableCell-alignRight"
+                    scope="col"
+                  >
+                    Action
+                  </th>
+                </tr>
+              </thead>
+              <tbody
+                class="MuiTableBody-root"
+              />
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
